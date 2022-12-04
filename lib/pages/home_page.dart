@@ -181,7 +181,36 @@ class _HomePageState extends State<HomePage> {
             ),
             Expanded(
                 child: Container(
-              color: Colors.white,
+              color: Colors.grey[100],
+              padding: EdgeInsets.all(25),
+              child: Column(
+                children: [
+                  // excerise heading
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Excerises",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                      Icon(Icons.more_horiz),
+                    ],
+                  ),
+
+                  // listview of excerises
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white),
+                    child: ListTile(
+                      leading: Icon(Icons.favorite),
+                    ),
+                  )
+                ],
+              ),
             )),
           ],
         ),
