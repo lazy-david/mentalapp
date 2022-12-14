@@ -202,13 +202,48 @@ class _HomePageState extends State<HomePage> {
 
                   // listview of excerises
                   Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white),
-                    child: ListTile(
-                      leading: Icon(Icons.favorite),
-                    ),
-                  )
+                      padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.favorite),
+                              SizedBox(
+                                width: 12,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  //title
+                                  Text(
+                                    'Speaking Skills ',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16),
+                                  ),
+
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  // subtitle
+                                  Text(
+                                    '16 Exercises ',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 14,
+                                        color: Colors.grey),
+                                  )
+                                ],
+                              ),
+                              Icon(Icons.more_horiz)
+                            ],
+                          ),
+                        ],
+                      ))
                 ],
               ),
             )),
